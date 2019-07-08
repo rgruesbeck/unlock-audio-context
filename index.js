@@ -1,22 +1,23 @@
 // read userAgent
-const device = function() {
+const device = () => {
+	return {
             isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent),
-            iOS: /iPhone|iPad|iPod/i.test(navigator.userAgent
+            iOS: /iPhone|iPad|iPod/i.test(navigator.userAgent)
+	}
 }
 
-
-// warm up audio context for iOS devices
-const unlockAudio = function(ctx) {
+// unlock locked audio contexts
+const unlockAudio = (audioCtx) => {
 	let currentDevice = device()
-	if (currentDevice.iOS && ctx.state === 'suspended') {
+	if (currentDevice.isMobile && audioCtx.state === 'suspended') {
 	    // check for locked audio context on touchend
 	    // NOTE: NOT using touchstart to avoid getting relocked incase gesture is detected.
 	    document.addEventListener('touchend', () => {
-		if (ctx.state !== 'running') {
-		    ctx.resume();
+		if (audioCtx.state !== 'running') {
+		    audioCtx.resume();
 		}
 	    })
 	}
 }
 
-module.export = unlockAudio;
+export default unlockAudio

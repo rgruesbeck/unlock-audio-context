@@ -4,7 +4,7 @@
   "description": "Helper function for unlocking audio context on iOS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx parcel test.html"
   },
   "author": "",
   "license": "ISC",
