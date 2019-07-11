@@ -3,8 +3,8 @@ Helper function for unlocking audio context on iOS devices
 
 ## Usage
 ```js
-	// unlock audio context: audiocontext, mute flag
-	unlockAudioContext(this.audioCtx, this.state.muted);
+	// unlock audio context: audiocontext
+	unlockAudioContext(this.audioCtx);
 ```
 
 ## Change Log
