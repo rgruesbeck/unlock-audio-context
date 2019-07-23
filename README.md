@@ -1,12 +1,24 @@
 # unlock-audio-context
-Helper function for unlocking audio context on mobile and iOS devices
+Unlocking web audio context on mobile and iOS devices.
 
-## Usage
+## Install
+```sh
+npm install --save unlock-audio-context
+```
+
+## Use
+Pass in the audio context to `unlockAudioContext()`
+### Syntax
 ```js
-	const audioCtx = new AudioContext();
-	
-	// unlock audio context
-	unlockAudioContext(audioCtx);
+unlockAudioContext(context)
+```
+
+### Examples
+```js
+const audioCtx = new AudioContext();
+
+// unlock audio context
+unlockAudioContext(audioCtx);
 ```
 
 ## Change Log
