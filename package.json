@@ -1,6 +1,6 @@
 {
   "name": "unlock-audio-context",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Helper function for unlocking audio context on iOS",
   "main": "index.js",
   "scripts": {
